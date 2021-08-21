@@ -1,0 +1,149 @@
+{
+  "project_info": {
+    "project_number": "878537716795",
+    "firebase_url": "https://lootllo-46bfc.firebaseio.com",
+    "project_id": "lootllo-46bfc",
+    "storage_bucket": "lootllo-46bfc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878537716795:android:9b6fd59be0f64f4dfbd81e",
+        "android_client_info": {
+          "package_name": "com.groupsale.Ecomm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878537716795-mhe73ch35rsp0dltg4mmpkh5r3ct3dga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU6RtRp_9TxXweBol174GcopAbb6Neb6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878537716795-mhe73ch35rsp0dltg4mmpkh5r3ct3dga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878537716795:android:453ce6efa0c16e30fbd81e",
+        "android_client_info": {
+          "package_name": "com.groupsale.Lootlo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878537716795-00nqt3qumrba14kso7bi82dh87s54rvp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "0c2c378e341519f4019b6d662c97224a5e47d525"
+          }
+        },
+        {
+          "client_id": "878537716795-16u067udjnlaq3cc16ken91d53f0fc4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "6223ba4730b8037dc2b2eecf2fed9808c0e98f62"
+          }
+        },
+        {
+          "client_id": "878537716795-2jd443trhu84ds9hpivk68iss0hlksu0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "147b13e4d037f477859bfbeb673b796cbaac6cfb"
+          }
+        },
+        {
+          "client_id": "878537716795-37gcsb3dcg0h4k07p3j64augfpf2pd3i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "8ed80d296003fcb7f9f6408b055a41fc379ca8fd"
+          }
+        },
+        {
+          "client_id": "878537716795-3hcuefdrh1b8nj1jfkuuc8pk5ifurdgr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "0a272679fd8292e9756ea6d4e8dc348b5f595ba7"
+          }
+        },
+        {
+          "client_id": "878537716795-87rvk75bc5vtcgpvofivn3eri9lokr82.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "67ac76a205f52d2ff1233bda728d9fada30e9a4f"
+          }
+        },
+        {
+          "client_id": "878537716795-do7esdj386t51e4c87brv6tugdlig6f2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "2f1905fcd90b2b457df13d4903492275f5ecc575"
+          }
+        },
+        {
+          "client_id": "878537716795-jdumml301qsrsqb8dr2oli0cfhftci71.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "95d4a6fa532b79311b4a7d5dbd8026cb4b0edb32"
+          }
+        },
+        {
+          "client_id": "878537716795-ull7a60qhhj3ur80i9gnilomje290cdo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "27611c8df6339bee4a2885c75a96b8f78d04946a"
+          }
+        },
+        {
+          "client_id": "878537716795-v1bf68ks0ka4rkj1cmn415l5t9o9ipfu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.groupsale.Lootlo",
+            "certificate_hash": "6534bb7c614ffd5dd59a6c9117b54db7b9a4ae46"
+          }
+        },
+        {
+          "client_id": "878537716795-mhe73ch35rsp0dltg4mmpkh5r3ct3dga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU6RtRp_9TxXweBol174GcopAbb6Neb6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878537716795-mhe73ch35rsp0dltg4mmpkh5r3ct3dga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.core.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.RewardsFragment">
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:background="#F2F2F8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/rewardClaim"
+        android:layout_width="match_parent"
+        android:layout_height="72dp">
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:id="@+id/rectangle_8"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_group_2683" />
+
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:paddingStart="@dimen/_8sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Your Grousale Coins : "
+            android:textColor="@color/primary_text"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/_8sdp" />
+        <TextView
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="1000"
+            android:textColor="@color/primary_text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/montserrat"
+            android:text="Rewards Coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:divider="@null"
+            android:id="@+id/rewardCoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/montserrat"
+            android:text="Re 1 Store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:divider="@null"
+            android:id="@+id/rewardReOneProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/montserrat"
+            android:text="Share and Win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_16sdp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:divider="@null"
+            android:id="@+id/rewardShareAndWinProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

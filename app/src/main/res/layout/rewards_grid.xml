@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardReward"
+        android:layout_width="157dp"
+        android:layout_height="167dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent">
+
+
+                <ImageView
+                    android:id="@+id/RewardImg"
+                    android:layout_width="91dp"
+                    android:layout_height="78dp"
+                    android:layout_marginEnd="24dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.768"
+                    tools:srcCompat="@drawable/shoppingcard"
+                    android:layout_marginRight="24dp" />
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/RewardName"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_horizontal"
+                    android:text="Shopping Card"
+                    android:textColor="@color/primary_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/RewardImg"
+                    tools:layout_editor_absoluteX="23dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/cardReward"
+                app:layout_constraintStart_toStartOf="@id/cardReward"
+                app:layout_constraintEnd_toEndOf="@id/cardReward"
+                tools:layout_editor_absoluteX="100dp">
+
+                <ProgressBar
+                    android:progress="30"
+                    android:gravity="center"
+                    android:id="@+id/progressBarReward"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:padding="4dp"
+                    android:progressBackgroundTint="@color/colorAccent"
+                    android:progressTint="@color/main_color" />
+
+                <TextView
+                    android:layout_marginEnd="16dp"
+                    android:text="30%"
+                    android:id="@+id/loadingNumber"
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:padding="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

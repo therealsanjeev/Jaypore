@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.JoinFragment">
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/myDeal"
+                android:layout_width="match_parent"
+                android:layout_margin="30dp"
+                android:textAlignment="textStart"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/my_deals"
+                android:fontFamily="@font/montserrat"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_up_24"
+                android:textSize="18sp"
+                android:textColor="#242424"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:layout_height="wrap_content" />
+
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressMyDeal"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/myDeal"
+            app:layout_constraintStart_toStartOf="@+id/myDeal"
+            app:layout_constraintTop_toBottomOf="@+id/myDeal" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+
+            android:id="@+id/RecyclerView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#fff"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/myDeal"
+            tools:layout_editor_absoluteX="5dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/rewardDeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginTop="16dp"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_up_24"
+            android:fontFamily="@font/montserrat"
+            android:gravity="start"
+            android:paddingVertical="2dp"
+            android:text="@string/my_reward_deals"
+            android:textAlignment="viewStart"
+            android:textColor="#242424"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/RecyclerView1"
+            tools:layout_editor_absoluteX="30dp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/RecyclerViewRewardDeal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_marginTop="16dp"
+            android:background="#fff"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/rewardDeal"
+            tools:layout_editor_absoluteX="5dp">
+
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/pinDeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_marginTop="16dp"
+            android:drawableRight="@drawable/ic_baseline_keyboard_arrow_up_24"
+            android:fontFamily="@font/montserrat"
+            android:gravity="start"
+            android:paddingVertical="2dp"
+            android:text="@string/deals_around_you"
+            android:textAlignment="viewStart"
+            android:textColor="#242424"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/RecyclerViewRewardDeal"
+            tools:layout_editor_absoluteX="30dp" />
+
+        <ProgressBar
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            style="?android:attr/progressBarStyleLarge"
+            android:visibility="visible"
+            android:id="@+id/progressbarDealAround"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/pinDeal"
+            app:layout_constraintStart_toStartOf="@+id/pinDeal"
+            app:layout_constraintTop_toBottomOf="@+id/pinDeal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/RecyclerViewPinCode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_marginTop="16dp"
+            android:background="#fff"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/pinDeal"
+            tools:layout_editor_absoluteX="5dp">
+
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

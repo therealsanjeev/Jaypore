@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EF2512</color>
+    <color name="colorPrimaryDark">#BC4226</color>
+    <color name="colorAccent">#ffff</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#F2F2F3</color>
+    <color name="whatsapp">#4FCE5D</color>
+    <color name="secondary_color">#fbff0f</color>
+    <color name="main_color">#EEF21F</color>
+    <color name="GREEN">#E8FFF9</color>
+    <color name="DARKGREEN">#008000</color>
+    <color name="Red">#CD0505</color>
+    <color name="black">#000000</color>
+
+    <!--   Alert Dialog  -->
+    <color name="colorAlertPrimary">#306B34</color>
+    <color name="colorAlertSecondary">#FF6663</color>
+</resources>

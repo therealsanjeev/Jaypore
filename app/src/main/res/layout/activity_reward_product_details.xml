@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".activities.RewardCoinsActivity">
+
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="20dp"
+        android:isScrollContainer="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/rewardcoins"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:title="Product name"
+        app:titleTextColor="@color/white" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/confetti_reward"
+            android:layout_width="match_parent"
+            android:elevation="21dp"
+            android:layout_height="match_parent"
+            app:lottie_rawRes="@raw/confetti"
+            app:lottie_autoPlay="false"
+            android:visibility="gone"
+            />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:layout_marginTop="?android:actionBarSize"
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_180sdp"
+                android:gravity="center"
+                android:background="@drawable/ic_gift_pana"
+                app:layout_constraintBottom_toTopOf="@+id/claimBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_16sdp"
+                android:text="Offer Detail "
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <ScrollView
+                android:id="@+id/body_scroll"
+                app:layout_constraintBottom_toTopOf="@+id/textview4"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                android:layout_width="match_parent"
+                 android:layout_height="@dimen/_150sdp">
+
+                <TextView
+                    android:id="@+id/productInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_4sdp"
+                    android:text="Loading"
+                    android:fontFamily="@font/montserrat"
+                     />
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_16sdp"
+                android:text="How to Claim "
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/body_scroll" />
+
+            <ScrollView
+                app:layout_constraintBottom_toTopOf="@+id/claimBtn"
+                app:layout_constraintTop_toBottomOf="@+id/textview4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_16sdp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp">
+                        <ImageView
+                            android:src="@drawable/ic_baseline_fiber_manual_record_24"
+                            android:layout_width="@dimen/_8sdp"
+                            android:layout_height="@dimen/_8sdp"/>
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="@color/black"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="Pay just ₹ 1 on delivery."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_16sdp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp">
+                    <ImageView
+                        android:src="@drawable/ic_baseline_fiber_manual_record_24"
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="@dimen/_8sdp"/>
+                    <TextView
+                        android:id="@+id/descSecondLine"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="@color/black"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:textSize="@dimen/_12sdp"
+                        android:text="Get 3 likes on your product. "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_16sdp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp">
+                        <ImageView
+                            android:src="@drawable/ic_baseline_fiber_manual_record_24"
+                            android:layout_width="@dimen/_8sdp"
+                            android:layout_height="@dimen/_8sdp"/>
+                        <TextView
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="@color/black"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="That is all! Enjoy the product."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/claimBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+
+
+                <TextView
+                    android:id="@+id/claimButtonText"
+                    android:paddingLeft="@dimen/_16sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_48sdp"
+                    android:text="Claim Your Reward "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    app:drawableEndCompat="@drawable/ic_group_2683"
+                    app:drawableRightCompat="@drawable/ic_group_2683" />
+
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rewardLayout"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/reward_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.airbnb.lottie.LottieAnimationView
+
+                android:id="@+id/animationViewCong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/confettibanner" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/claimBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/gift" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

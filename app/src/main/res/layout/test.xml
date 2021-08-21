@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="#ffffff">
+
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-340dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/imageview1"
+            android:gravity="center_horizontal"
+            android:text="2 KG Apples @ Rs. 20 "
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview"
+            android:layout_marginLeft="-350dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/imageview1"
+            android:gravity="center_horizontal"
+            android:text="Santosh Kumar Singh"
+            android:textColor="#2B2A2A"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textview3"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview2"
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="5dp"
+            android:text="People Left: 2"
+            android:textColor="#E8071A"
+            android:textSize="14sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textview4"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/textview2"
+            android:layout_marginLeft="100dp"
+            android:drawableLeft="@drawable/ic_baseline_alarm_on_24"
+            android:layout_marginTop="2dp"
+            android:text=" 10:43"
+            android:gravity="center_vertical"
+            android:layout_alignLeft="@id/textview3"
+            android:textColor="#05E81B"
+            android:textStyle="bold"
+            android:textSize="14sp">
+
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/imageview1"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="4dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="80dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher_round"></ImageView>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/ViewButton"
+            android:layout_width="102dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="32dp"
+            android:layout_toEndOf="@+id/textview4"
+            android:layout_toRightOf="@+id/textview4"
+            android:background="@drawable/viewbutton"
+            android:padding="15dp"
+            android:text="VIEW"
+            android:textColor="#070707" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

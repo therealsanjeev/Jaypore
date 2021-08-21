@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingRight="10dp">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:src="@drawable/ic_group_2683" />
+
+    <TextView
+
+        android:fontFamily="@font/montserrat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="0dp"
+        android:text="Coins "
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/totalCoins"
+        android:fontFamily="@font/montserrat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="0dp"
+        android:text=": 0"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+</LinearLayout>

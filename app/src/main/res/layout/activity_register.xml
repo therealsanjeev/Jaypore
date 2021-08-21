@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/image_slider_reg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:iss_auto_cycle="true"
+        app:iss_delay="0"
+        app:iss_period="1000"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentTop="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detailCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="5dp"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/upline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/registercard">
+
+
+
+                    <TextView
+                        android:id="@+id/login_with_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="29dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_alignParentTop="true"
+                        android:text="Login with Phone number"
+                        android:textSize="18sp"
+                        android:letterSpacing="-0.01"
+                        android:textColor="#091926"
+                        android:fontFamily="@font/montserrat"
+                        android:lineSpacingExtra="7sp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/upline"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/rectangle_9">
+
+
+                    <EditText
+                        android:id="@+id/usname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="Enter your name"
+                        android:lineSpacingExtra="4sp"
+                        android:textSize="16sp"
+                        android:letterSpacing="-0.01"
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/rectangle_9">
+
+                    <EditText
+                        android:id="@+id/inputMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="Enter your phone number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:lineSpacingExtra="4sp"
+                        android:textSize="16sp"
+                        android:letterSpacing="-0.01"
+                        />
+
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/buttonContinue"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="92dp"
+                    android:layout_marginTop="37dp"
+                    android:background="@drawable/rewardcard"
+                    android:letterSpacing="-0.01"
+                    android:lineSpacingExtra="4sp"
+                    android:text="Login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerCountries"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/buttonContinue"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:visibility="invisible" />
+
+                <ProgressBar
+                    android:id="@+id/progressOTP"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/buttonContinue"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="185dp"
+                    android:layout_marginLeft="185dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </com.denzcoskun.imageslider.ImageSlider>
+
+
+
+
+
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

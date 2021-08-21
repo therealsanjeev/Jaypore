@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SplashActivity"
+    android:background="@drawable/jaii"
+    android:scaleType="centerCrop"
+    android:layout_gravity="center"
+    android:adjustViewBounds="true"
+    android:focusable="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_top"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_top_vector"/>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+
+            android:id="@+id/iv_Shop"
+            android:layout_width="280dp"
+            android:layout_height="180dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/jaypore_logo_retina" />
+
+        <TextView
+            android:visibility="gone"
+            android:text="Jaypore is about bringing the world\n a little closer together"
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/text_view1"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
+            android:text="SHOP TOGETHER"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp"
+            android:textStyle="italic|bold" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_bottom"
+        android:adjustViewBounds="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_bottom_vector"/>
+
+</RelativeLayout>
