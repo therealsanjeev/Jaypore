@@ -22,7 +22,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.StatusRewardDealActivity"></activity>
+        <activity
+            android:name=".activities.RewardActivity"
+            android:exported="true" />
+        <activity android:name=".activities.StatusRewardDealActivity" />
         <activity android:name=".activities.RewardProductDetailsActivity" />
         <activity android:name=".HelpActivity" />
         <activity android:name=".OrderDetails" />

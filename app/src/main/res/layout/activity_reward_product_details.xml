@@ -11,19 +11,31 @@
 
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolBar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="?actionBarSize"
         android:background="@color/colorPrimaryDark"
-        android:elevation="20dp"
-        android:isScrollContainer="true"
+        android:id="@+id/toolbar"
+        android:elevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/rewardcoins"
-        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:title="Product name"
-        app:titleTextColor="@color/white" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBackProduct"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:text="  "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_16sdp" />
+    </com.google.android.material.appbar.MaterialToolbar>
 
 
     <FrameLayout

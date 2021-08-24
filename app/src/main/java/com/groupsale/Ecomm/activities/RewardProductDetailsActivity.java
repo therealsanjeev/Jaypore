@@ -70,6 +70,7 @@ public class RewardProductDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityRewardProductDetailsBinding.inflate(getLayoutInflater());
 
+        binding.btnBackProduct.setOnClickListener(v->onBackPressed());
         setContentView(binding.getRoot());
         slider= binding.imageView;
         confetti = binding.confettiReward;
@@ -77,7 +78,7 @@ public class RewardProductDetailsActivity extends AppCompatActivity {
 
         deal = ((ObjectWrapperForBinder)getIntent().getExtras().getBinder("passedDealFromReward")).getData();
         passingActivity = getIntent().getExtras().getString("passingActivity");
-        binding.toolBar.setTitle(deal.getName());
+        binding.toolbar.setTitle(deal.getName());
         binding.productInfo.setText(Html.fromHtml(deal.getDescription()));
 
         if(passingActivity.equals("ReOne")) {
@@ -104,7 +105,7 @@ public class RewardProductDetailsActivity extends AppCompatActivity {
                         } else {
                             coinsAvailable = 0;
                         }
-                        text = binding.toolBar.getMenu().getItem(0).getActionView().findViewById(R.id.totalCoins);
+                        text = binding.toolbar.getMenu().getItem(0).getActionView().findViewById(R.id.totalCoins);
                         text.setText(String.valueOf(coinsAvailable));
                     }
                 }
@@ -313,5 +314,10 @@ public class RewardProductDetailsActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

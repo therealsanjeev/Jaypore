@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -45,7 +46,7 @@ public class RewardCoinsActivity extends AppCompatActivity {
         binding = ActivityRewardCoinsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
+        binding.btnBackRewardCoins.setOnClickListener(v -> onBackPressed());
         FirebaseFunctions.getInstance().getHttpsCallable("getTime")
                 .call().addOnSuccessListener(httpsCallableResult -> {
             long time=(long) httpsCallableResult.getData();
@@ -65,7 +66,7 @@ public class RewardCoinsActivity extends AppCompatActivity {
         String key = bundle.getString("rewardName");
         rewardDetails = (RewardCoinsModel) getIntent().getSerializableExtra("reward");
         Log.d(TAG, "onCreate: "+rewardDetails.getCardName());
-        binding.toolBar.setTitle(rewardDetails.getCardName());
+        binding.toolbarTitle.setText((CharSequence) rewardDetails.getCardName());
         binding.claim1.setText(rewardDetails.getClaim1());
         binding.claim2.setText(rewardDetails.getClaim2());
         binding.claim3.setText(rewardDetails.getClaim3());
@@ -256,5 +257,8 @@ public class RewardCoinsActivity extends AppCompatActivity {
                 );
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

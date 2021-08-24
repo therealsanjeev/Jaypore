@@ -10,30 +10,32 @@
     >
 
 
-    <LinearLayout
-        android:id="@+id/app_bar"
+    <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark">
-        <ImageView
-            android:id="@+id/Backbtn"
-            android:layout_width="35dp"
-            android:layout_gravity="center"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            app:tint="@color/white" />
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/btnBackProfile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                app:titleTextColor="@color/white"
-                app:title="Profile"/>
-        </LinearLayout>
-    </LinearLayout>
+            android:layout_marginStart="@dimen/_16sdp"
+            android:text="Profile  "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_16sdp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
 
 
 <LinearLayout
@@ -60,12 +62,13 @@
         android:layout_height="120dp"
         android:layout_gravity="center_horizontal"
         android:layout_margin="2dp">
+
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/profileImg"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_baseline_person_24"/>
+            android:src="@drawable/ic_baseline_person_24" />
     </RelativeLayout>
 
 </LinearLayout>
@@ -107,10 +110,14 @@
         android:background="@color/colorPrimaryDark">
 
         <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="39dp"
+            android:layout_height="40dp"
             android:orientation="vertical">
             <androidx.appcompat.widget.Toolbar
+                android:gravity="center"
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 app:titleMarginStart="45dp"
@@ -120,14 +127,15 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp">
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="16dp"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
             android:src="@drawable/home"
             app:tint="@color/colorPrimaryDark" />
 
@@ -142,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:text="House No./Building No./Address"
-                android:textSize="14sp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/secondary_text"/>
 
         </LinearLayout>
@@ -154,8 +162,8 @@
         android:padding="10dp">
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="16dp"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
             android:src="@drawable/ic_baseline_my_location_24"
             app:tint="@color/colorPrimaryDark"/>
 
@@ -169,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:text="Azadpur"
-                android:textSize="14sp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/secondary_text"/>
 
             <TextView
@@ -178,7 +186,7 @@
                 android:text="Save new"
                 android:textAlignment="viewEnd"
                 android:layout_marginRight="40dp"
-                android:textSize="16sp"
+                android:textSize="@dimen/_16sdp"
                 android:fontFamily="@font/montserrat"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
@@ -194,8 +202,8 @@
         android:padding="10dp">
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="16dp"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
             android:src="@drawable/su_location"
             app:tint="@color/colorPrimaryDark"/>
 
@@ -210,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:text="Pincode"
-                android:textSize="14sp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/secondary_text"/>
 
         </LinearLayout>
@@ -225,6 +233,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="39dp"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:orientation="vertical">
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
@@ -259,7 +269,7 @@
                 android:layout_marginLeft="25dp"
                 android:layout_gravity="fill|center"
                 android:text="Invite your friends and get 2 products of your choice free"
-                android:textSize="14sp"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@color/secondary_text"/>
 
         </LinearLayout>

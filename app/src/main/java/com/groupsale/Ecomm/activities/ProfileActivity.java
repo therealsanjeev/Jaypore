@@ -28,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
 //        setContentView(R.layout.activity_profile);
         binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        findViewById(R.id.btnBackProfile).setOnClickListener(v -> onBackPressed());
 
         preferenceManager = new PreferenceManager(getApplicationContext());
         Editbtn = binding.editBtn;
@@ -55,5 +56,10 @@ public class ProfileActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

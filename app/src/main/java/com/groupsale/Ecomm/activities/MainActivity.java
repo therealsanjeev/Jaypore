@@ -132,11 +132,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
 
                 return true;
+            case R.id.RewardMenu:
+                Intent rewardIntent = new Intent(MainActivity.this, RewardActivity.class);
+                startActivity(rewardIntent);
+                return true;
             case R.id.Order_details:
                 Intent OrderIntent = new Intent(MainActivity.this, OrderDetails.class);
                 startActivity(OrderIntent);
-
-
                 return true;
 
             case R.id.help:
@@ -255,8 +257,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         tabLayout.addTab(tabLayout.newTab().setText("JOIN"));
-        tabLayout.addTab(tabLayout.newTab().setText("STORE"));
         tabLayout.addTab(tabLayout.newTab().setText("EXPLORE"));
+        tabLayout.addTab(tabLayout.newTab().setText("STORE"));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
@@ -282,6 +284,7 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(fragmentAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        viewPager.setCurrentItem(1);
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {

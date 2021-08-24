@@ -26,9 +26,10 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new JoinFragment();
             case 1:
-            return new Deal();
-            case 2:
                 return new ExploreFragment();
+
+            case 2:
+                return new Deal();
             default:
                 return null;
         }

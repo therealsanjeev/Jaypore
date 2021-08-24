@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="Categories"
         android:fontFamily="@font/raleway"
-        android:textSize="@dimen/_18sdp"
+        android:textSize="@dimen/_12sdp"
         android:padding="@dimen/_4sdp"
         />
 

@@ -59,7 +59,7 @@ public class RewardCoinsAdapter extends RecyclerView.Adapter<RewardCoinsAdapter.
     @Override
     public void onBindViewHolder(@NonNull @NotNull RewardsCoinViewHolder holder, int position) {
         holder.tvCoins.setText(list.get(position).getCoins());
-        holder.rewardName.setText(list.get(position).getCardName());
+        holder.rewardName.setText((CharSequence) list.get(position).getCardName());
         Glide.with(context).load(list.get(position).getCardImg()).error(R.drawable.ic_gift_rafiki__1_).into(holder.imageView);
 
 

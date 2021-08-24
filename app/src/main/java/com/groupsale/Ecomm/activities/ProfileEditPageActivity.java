@@ -55,6 +55,13 @@ public class ProfileEditPageActivity extends AppCompatActivity {
         binding = ActivityProfileEditPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.btnBackProfileEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         progressDialog = new ProgressDialog(this);
         preferenceManager = new PreferenceManager(getApplicationContext());
 

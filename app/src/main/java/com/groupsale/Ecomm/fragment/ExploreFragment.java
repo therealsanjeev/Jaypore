@@ -76,7 +76,7 @@ public class ExploreFragment extends Fragment {
         categoryAdapter.SetData(categoryList);
         postAdapter.SetData(postList);
 
-        categoryRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, true));
+        categoryRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         postRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
         categoryRecyclerView.setAdapter(categoryAdapter);

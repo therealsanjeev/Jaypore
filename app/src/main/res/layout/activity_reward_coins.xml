@@ -8,19 +8,31 @@
     tools:context=".activities.RewardCoinsActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolBar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="?actionBarSize"
         android:background="@color/colorPrimaryDark"
-        android:elevation="20dp"
-        android:isScrollContainer="true"
+        android:elevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:title="Rewards"
-        app:titleTextColor="@color/white" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/btnBackRewardCoins"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:drawableRight="@drawable/ic_group_2683"
+            android:text="Reward Coins  "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_16sdp" />
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <FrameLayout
         android:layout_width="match_parent"

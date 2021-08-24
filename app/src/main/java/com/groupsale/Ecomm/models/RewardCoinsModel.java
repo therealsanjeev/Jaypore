@@ -1,5 +1,7 @@
 package com.groupsale.Ecomm.models;
 
+import android.widget.ImageView;
+
 import java.io.Serializable;
 
 /**

@@ -14,6 +14,11 @@
         android:orderInCategory="100"
         android:title="@string/action_Profile"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/RewardMenu"
+        android:orderInCategory="100"
+        android:title="@string/rewards"
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/Order_details"
