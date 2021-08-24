@@ -256,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout.addTab(tabLayout.newTab().setText("JOIN"));
         tabLayout.addTab(tabLayout.newTab().setText("STORE"));
-        tabLayout.addTab(tabLayout.newTab().setText("REWARDS"));
+        tabLayout.addTab(tabLayout.newTab().setText("EXPLORE"));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
