@@ -273,7 +273,7 @@ public class JoinFragment extends Fragment implements DealAdapter.onClicked {
                             }
                         }.start();
 
-                        Picasso.get().load(imageBaseUrl + model.getImageUrl().get(0).getFile()).into(holder.itemImage);
+                        Picasso.get().load(model.getImageUrl().get(0).getFile()).into(holder.itemImage);
 
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -380,7 +380,7 @@ public class JoinFragment extends Fragment implements DealAdapter.onClicked {
                             }
                         }.start();
 
-                        Picasso.get().load(imageBaseUrl + model.getImageUrl().get(0).getFile()).into(holder.itemImage);
+                        Picasso.get().load(model.getImageUrl().get(0).getFile()).into(holder.itemImage);
 
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -460,7 +460,7 @@ public class JoinFragment extends Fragment implements DealAdapter.onClicked {
                             }
                         }.start();
 
-                        Picasso.get().load(imageBaseUrl + model.getImageUrl().get(0).getFile()).into(holder.itemImage);
+                        Picasso.get().load( model.getImageUrl().get(0).getFile()).into(holder.itemImage);
 
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override

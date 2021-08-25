@@ -217,7 +217,7 @@ public class DealdeepLink extends AppCompatActivity {
                     if(dataSnapshot.child(dealID).exists()){
 
                         currentDeal = dataSnapshot.child(dealID).getValue(DealModel.class);
-                        Picasso.get().load(imageBaseUrl+currentDeal.getImageUrl().get(0).getFile()).into(image); // chamged with
+                        Picasso.get().load(currentDeal.getImageUrl().get(0).getFile()).into(image); // chamged with
                         title.setText(currentDeal.getName());
                         binding.Price.setText("₹"+String.valueOf((int)Double.parseDouble(currentDeal.getDealPrice())));
                         binding.strikePrice.setPaintFlags(binding.strikePrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);

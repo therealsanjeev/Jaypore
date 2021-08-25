@@ -83,7 +83,7 @@ public class productDescription extends AppCompatActivity {
 
 
 
-                        remoteimages.add(new SlideModel(imageBaseUrl+currrentDeal.getImageUrl().get(i).getFile(), ScaleTypes.FIT)); // for one image
+                        remoteimages.add(new SlideModel(currrentDeal.getImageUrl().get(i).getFile(), ScaleTypes.FIT)); // for one image
 
                     }
 

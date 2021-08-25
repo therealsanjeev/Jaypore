@@ -24,6 +24,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder> {
 
@@ -53,7 +54,16 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
     public void onBindViewHolder(@NonNull DealViewHolder holder, int position) {
 
         String imageBaseUrl = "https://lootllo.com/pub/media/catalog/product";
-        Picasso.get().load(imageBaseUrl + list.get(position).getImageUrl().get(0)).into(holder.imageView);
+        String arr[]={
+          "https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/8/0/800028772-1_2.jpg",
+          "https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/8/0/800028771-3_2.jpg",
+                "https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/8/0/800028769-3_2.jpg",
+                "https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/8/0/800028766-1_2.jpg"
+        };
+        int rnd = new Random().nextInt(arr.length);
+        Picasso.get().load(arr[rnd]).into(holder.imageView);
+
+        Log.d("TAG", "onBindViewHolder: "+list.get(position).getImageUrl().get(0).toString());
 
         String titleText=list.get(position).getName(),finalAboveText="";
         String[] splited = titleText.split("\\s+");

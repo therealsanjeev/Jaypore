@@ -183,7 +183,9 @@ public class MainActivity extends AppCompatActivity {
                     List<String> imageList = new ArrayList<String>();
                     for (imageUrl img : model.getImageUrl()) {
                         imageList.add(img.getFile());
+                        Log.d(TAG, "onChildChanged: "+img.getFile());
                     }
+
                     RoomModel roomModel = new RoomModel(
                             model.getDealID(),
                             model.getProductID(),

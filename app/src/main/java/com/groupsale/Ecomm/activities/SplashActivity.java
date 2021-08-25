@@ -83,6 +83,7 @@ public class SplashActivity extends AppCompatActivity {
                 List<String> imageList = new ArrayList<>();
                 for (imageUrl img : model.getImageUrl()) {
                     imageList.add(img.getFile());
+                    Log.d(TAG, "onChildAdded: "+img.getFile());
                 }
 
                 RoomModel roomModel = new RoomModel(
