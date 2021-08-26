@@ -23,6 +23,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.UserActivity"
+            android:exported="true" />
+        <activity
             android:name=".activities.RewardActivity"
             android:exported="true" />
         <activity android:name=".activities.StatusRewardDealActivity" />

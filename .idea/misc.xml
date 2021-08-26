@@ -3,24 +3,42 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable-mdpi/bg.xml" value="0.2484375" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable-mdpi/category_back.xml" value="0.24461538461538462" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable-v21/ic_menu_camera.xml" value="0.24461538461538462" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" value="0.1296875" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24461538461538462" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable/fashion_photoshoot_amico.xml" value="0.24461538461538462" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable/ic_fashion_blogging_amico.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable/ic_group_2683.xml" value="0.24461538461538462" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24461538461538462" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/drawable/round_mic_20.xml" value="0.1296875" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout-v21/activity_user.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_deal__deep_link.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_deeplink.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_help.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_intro.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_product_description.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_profile.xml" value="0.2074074074074074" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_profile_edit_page.xml" value="0.2074074074074074" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_reward.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_reward_coins.xml" value="0.2074074074074074" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_reward_product_details.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_splash.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/activity_user.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/fragment_explore.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/fragment_join.xml" value="0.1781150159744409" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/fragment_rewards.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/item_design.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/layout_offer_details.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/order_design.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/rewards_grid.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/share_popup.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/single_category_name_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/single_item_collections.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/single_post_item.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/layout/single_rewards_item.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/menu/main.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/there/Desktop/jaypore/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.24461538461538462" />
       </map>

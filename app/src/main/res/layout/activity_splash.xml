@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.SplashActivity"
-    android:background="@drawable/jaii"
+    android:background="@color/white"
     android:scaleType="centerCrop"
     android:layout_gravity="center"
     android:adjustViewBounds="true"
@@ -12,6 +12,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/iv_top"
@@ -22,33 +23,39 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <ImageView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/fasionpng" />
 
+        <ImageView
+
+            android:layout_marginTop="@dimen/_50sdp"
             android:id="@+id/iv_Shop"
-            android:layout_width="280dp"
-            android:layout_height="180dp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/jaypore_logo_retina" />
 
         <TextView
-            android:visibility="gone"
-            android:text="Jaypore is about bringing the world\n a little closer together"
             android:id="@+id/text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_gravity="center"
+            android:layout_marginTop="8dp"
             android:gravity="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:text="Jaypore is about bringing the world\n a little closer together"
+            android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone" />
 
         <TextView
-            android:visibility="gone"
             android:id="@+id/text_view1"
             android:layout_width="207dp"
             android:layout_height="wrap_content"
@@ -57,17 +64,19 @@
             android:text="SHOP TOGETHER"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="30sp"
-            android:textStyle="italic|bold" />
+            android:textStyle="italic|bold"
+            android:visibility="gone" />
 
 
     </LinearLayout>
 
     <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/iv_bottom"
-        android:adjustViewBounds="true"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/ic_bottom_vector"/>
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_bottom_vector" />
 
 </RelativeLayout>

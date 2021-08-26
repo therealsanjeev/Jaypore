@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,7 +44,7 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
     @NonNull
     @Override
     public DealViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_design, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_item_collections, parent, false);
         return new DealViewHolder(view);
     }
 
@@ -80,40 +81,40 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
        }
 
         holder.aboveText.setText(finalAboveText);
-        Log.d("DEALADAPTER", "onBindViewHolder: "+list.get(position).getName());
-
-        holder.price.setText("₹ " +(int) Double.parseDouble(list.get(position).getDealPrice()));
+//        Log.d("DEALADAPTER", "onBindViewHolder: "+list.get(position).getName());
+//
+//        holder.price.setText("₹ " +(int) Double.parseDouble(list.get(position).getDealPrice()));
         holder.customerName.setText(list.get(position).getCreatorName());
 
-        int price = (int) Double.parseDouble(list.get(position).getDealPrice());
-
-        if (list.get(position).getOriginalPrice() != null) {
-            int originalPrice = Integer.parseInt(list.get(position).getOriginalPrice());
-            holder.strikePrice.setText("₹ " + String.valueOf(originalPrice));
-            Log.d("Price", list.get(position).getOriginalPrice());
-            int off = price * 100 / originalPrice;
-            String offText = 100-off + "% Off";
-            holder.flatOff.setText(offText);
-
-        }
-        if(!list.get(position).getPeopleLeft().equals(null))
-        holder.peopleLeft.setText("People needed: " + list.get(position).getPeopleLeft());
-        long elapsedTime = 86400000 - getElapsedTime(list.get(position).getEpochTime());
-        new CountDownTimer(elapsedTime, 1000) {
-            public void onTick(long millisUntilFinished) {
-
-                NumberFormat f = new DecimalFormat("00");
-                long hour = (millisUntilFinished / 3600000) % 24;
-                long min = (millisUntilFinished / 60000) % 60;
-                long sec = (millisUntilFinished / 1000) % 60;
-                String time = f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
-                holder.timeLeft.setText(time);
-            }
-
-            public void onFinish() {
-                holder.timeLeft.setText("00:00:00");
-            }
-        }.start();
+//        int price = (int) Double.parseDouble(list.get(position).getDealPrice());
+//
+//        if (list.get(position).getOriginalPrice() != null) {
+//            int originalPrice = Integer.parseInt(list.get(position).getOriginalPrice());
+//            holder.strikePrice.setText("₹ " + String.valueOf(originalPrice));
+//            Log.d("Price", list.get(position).getOriginalPrice());
+//            int off = price * 100 / originalPrice;
+//            String offText = 100-off + "% Off";
+//            holder.flatOff.setText(offText);
+//
+//        }
+//        if(!list.get(position).getPeopleLeft().equals(null))
+//        holder.peopleLeft.setText("People needed: " + list.get(position).getPeopleLeft());
+//        long elapsedTime = 86400000 - getElapsedTime(list.get(position).getEpochTime());
+//        new CountDownTimer(elapsedTime, 1000) {
+//            public void onTick(long millisUntilFinished) {
+//
+//                NumberFormat f = new DecimalFormat("00");
+//                long hour = (millisUntilFinished / 3600000) % 24;
+//                long min = (millisUntilFinished / 60000) % 60;
+//                long sec = (millisUntilFinished / 1000) % 60;
+//                String time = f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
+//                holder.timeLeft.setText(time);
+//            }
+//
+//            public void onFinish() {
+//                holder.timeLeft.setText("00:00:00");
+//            }
+//        }.start();
     }
 
     @Override
@@ -125,7 +126,7 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
 
     public class DealViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private ImageView imageView;
+        private ImageView imageView,profile,container;
         public TextView customerName,aboveText,peopleLeft,timeLeft,strikePrice,price,flatOff;
         public Button listBtn;
         public ConstraintLayout constraintLayout;
@@ -133,27 +134,32 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
         public DealViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imageView = itemView.findViewById(R.id.itemimage);
+            imageView = itemView.findViewById(R.id.imageCollections);
 
-            customerName = itemView.findViewById(R.id.customername);
-            aboveText = itemView.findViewById(R.id.abovetext);
-            peopleLeft = itemView.findViewById(R.id.peopleleft);
-            timeLeft = itemView.findViewById(R.id.timeleft);
-            strikePrice = itemView.findViewById(R.id.strikePrice);
-            strikePrice.setPaintFlags(strikePrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            price = itemView.findViewById(R.id.Price);
-            flatOff = itemView.findViewById(R.id.flat_off);
-            listBtn = itemView.findViewById(R.id.buttonVerify);
-            constraintLayout=itemView.findViewById(R.id.itemView);
+            customerName = itemView.findViewById(R.id.nameTv);
+            aboveText = itemView.findViewById(R.id.aboveTv);
+//            peopleLeft = itemView.findViewById(R.id.peopleleft);
+//            timeLeft = itemView.findViewById(R.id.timeleft);
+//            strikePrice = itemView.findViewById(R.id.strikePrice);
+//            strikePrice.setPaintFlags(strikePrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+//            price = itemView.findViewById(R.id.Price);
+//            flatOff = itemView.findViewById(R.id.flat_off);
+//            listBtn = itemView.findViewById(R.id.buttonVerify);
+//            constraintLayout=itemView.findViewById(R.id.itemView);
+//            constraintLayout.setOnClickListener(this);
+//            listBtn.setOnClickListener(this);
+            container=itemView.findViewById(R.id.collectionsContainer);
+            profile=itemView.findViewById(R.id.profileImgCollections);
 
-            constraintLayout.setOnClickListener(this);
-            listBtn.setOnClickListener(this);
+
+            profile.setOnClickListener(v -> onClick.onProfileClicked(getAdapterPosition(),list));
+            container.setOnClickListener(v -> onClick.onItemClicked(getAdapterPosition(),list));
 
         }
 
         @Override
         public void onClick(View v) {
-            onClick.onItemClicked(getAdapterPosition(),list);
+
         }
     }
 
@@ -164,5 +170,6 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
     }
     public interface onClicked{
         void onItemClicked(int position, List<RoomModel> list);
+        void onProfileClicked(int position,List<RoomModel> list);
     }
 }

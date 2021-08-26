@@ -3,20 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.ExploreFragment">
 
 
-   <androidx.recyclerview.widget.RecyclerView
-       android:layout_marginTop="@dimen/_4sdp"
-       android:layout_marginBottom="@dimen/_8sdp"
-       android:layout_marginHorizontal="@dimen/_4sdp"
-       android:id="@+id/category_recyclerView"
-       app:layout_constraintTop_toTopOf="parent"
-       android:layout_width="match_parent"
-       tools:listitem="@layout/single_category_name_item"
-       android:layout_height="wrap_content"
-       />
+    <LinearLayout
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/bg"
+            android:orientation="horizontal">
+
+            <EditText
+                android:backgroundTint="@color/black"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:id="@+id/search_src_editText_home"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:hint="Search on jaypore!"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_16sdp" />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:listitem="@layout/single_category_name_item" />
 
 
 
@@ -26,8 +68,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:src="@drawable/ic_baseline_edit_24"
+            android:src="@drawable/ic_baseline_add_24"
             android:layout_margin="@dimen/_32sdp"
+            android:tint="@color/colorPrimaryDark"
             android:outlineSpotShadowColor="@color/colorPrimary"
             app:rippleColor="@color/colorPrimary"
 

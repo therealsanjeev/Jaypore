@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.UserActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop">
+
+        <ImageView
+            android:id="@+id/btnBackUser"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+
+            android:id="@+id/toolbarUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_32sdp"
+            android:text="User Name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_16sdp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/colorPrimaryDark" />
+
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/profileImageView"
+                        android:layout_width="150dp"
+                        android:src="@drawable/jaii"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:elevation="4dp"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="4dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/black"
+                    android:text="Followers 502"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/button1"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Follow"
+
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_16sdp"
+                    app:strokeColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userCollectionRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

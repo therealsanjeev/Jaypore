@@ -30,6 +30,7 @@ import com.groupsale.Ecomm.ModelClass;
 import com.groupsale.Ecomm.R;
 import com.groupsale.Ecomm.activities.StatusDealActivity;
 import com.groupsale.Ecomm.activities.StatusRewardDealActivity;
+import com.groupsale.Ecomm.activities.UserActivity;
 import com.groupsale.Ecomm.adapters.DealAdapter;
 import com.groupsale.Ecomm.models.DealModel;
 import com.groupsale.Ecomm.models.currentCustomer;
@@ -135,32 +136,32 @@ public class JoinFragment extends Fragment implements DealAdapter.onClicked {
         mydeal=v.findViewById(R.id.myDeal);
         pindeal=v.findViewById(R.id.pinDeal);
         rewardDeal = v.findViewById(R.id.rewardDeal);
-        mrecyclerView = v.findViewById(R.id.RecyclerView1);
-        mrecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+//        mrecyclerView = v.findViewById(R.id.RecyclerView1);
+//        mrecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         pinRecylerView = v.findViewById(R.id.RecyclerViewPinCode);
         pinRecylerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-        rewardRecyclerView = v.findViewById(R.id.RecyclerViewRewardDeal);
-        rewardRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+//        rewardRecyclerView = v.findViewById(R.id.RecyclerViewRewardDeal);
+//        rewardRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
 
         progressBarMyDeal = v.findViewById(R.id.progressMyDeal);
         progressBarDealAround = v.findViewById(R.id.progressbarDealAround);
 
-        showMyRewardDeals();// To be replaced with Room later
+//        showMyRewardDeals();// To be replaced with Room later
 
-        mydeal.setOnClickListener(v1 -> {
-            if(mrecyclerView.getVisibility()==View.GONE) {
-                mrecyclerView.setVisibility(View.VISIBLE);
-                mydeal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_up_24, 0);
-
-            }
-            else{
-                mrecyclerView.setVisibility(View.GONE);
-                mydeal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0);
-
-            }
-
-        });
+//        mydeal.setOnClickListener(v1 -> {
+//            if(mrecyclerView.getVisibility()==View.GONE) {
+//                mrecyclerView.setVisibility(View.VISIBLE);
+//                mydeal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_up_24, 0);
+//
+//            }
+//            else{
+//                mrecyclerView.setVisibility(View.GONE);
+//                mydeal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0);
+//
+//            }
+//
+//        });
 
         pindeal.setOnClickListener(v12 -> {
             if(pinRecylerView.getVisibility()==View.GONE){
@@ -175,32 +176,32 @@ public class JoinFragment extends Fragment implements DealAdapter.onClicked {
 
         });
 
-        rewardDeal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(rewardRecyclerView.getVisibility()==View.GONE){
-                    rewardRecyclerView.setVisibility(View.VISIBLE);
-                    rewardDeal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_up_24, 0);
-                }
-                else{
-                    rewardRecyclerView.setVisibility(View.GONE);
-                    rewardDeal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0);
-
-                }
-            }
-        });
+//        rewardDeal.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(rewardRecyclerView.getVisibility()==View.GONE){
+//                    rewardRecyclerView.setVisibility(View.VISIBLE);
+//                    rewardDeal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_up_24, 0);
+//                }
+//                else{
+//                    rewardRecyclerView.setVisibility(View.GONE);
+//                    rewardDeal.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_keyboard_arrow_down_24, 0);
+//
+//                }
+//            }
+//        });
 
         //Reading DATA from Room :
-        Flowable<List<RoomModel>> listFlowableMyDeals = roomDao.myDeals(FirebaseAuth.getInstance().getUid());
-        Disposable disposable = listFlowableMyDeals.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(list -> {
-                    dealAdapterMyDeal = new DealAdapter(list, this::onItemClicked);
-                    mrecyclerView.setAdapter(dealAdapterMyDeal);
-                    progressBarDealAround.setVisibility(View.GONE);
-                    mrecyclerView.setVisibility(View.VISIBLE);
-
-                });
+//        Flowable<List<RoomModel>> listFlowableMyDeals = roomDao.myDeals(FirebaseAuth.getInstance().getUid());
+//        Disposable disposable = listFlowableMyDeals.subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(list -> {
+//                    dealAdapterMyDeal = new DealAdapter(list, this::onItemClicked);
+//                    mrecyclerView.setAdapter(dealAdapterMyDeal);
+//                    progressBarDealAround.setVisibility(View.GONE);
+//                    mrecyclerView.setVisibility(View.VISIBLE);
+//
+//                });
         Flowable<List<RoomModel>> listFlowableDealAroundYou = roomDao.dealAroundYou("110010");
 
         Disposable disposable1 = listFlowableDealAroundYou.subscribeOn(Schedulers.io())
@@ -209,14 +210,14 @@ public class JoinFragment extends Fragment implements DealAdapter.onClicked {
                     for (RoomModel it : list) {
                         Log.d(TAG, "onCreateView: ");
                     }
-                    dealAdapterAround = new DealAdapter(list, this::onItemClicked);
+                    dealAdapterAround = new DealAdapter(list, this);
                     pinRecylerView.setAdapter(dealAdapterAround);
                     progressBarDealAround.setVisibility(View.GONE);
                     pinRecylerView.setVisibility(View.VISIBLE);
 
                 });
 
-        compositeDisposable.add(disposable);
+//        compositeDisposable.add(disposable);
         compositeDisposable.add(disposable1);
         return v;
     }
@@ -504,9 +505,17 @@ public class JoinFragment extends Fragment implements DealAdapter.onClicked {
     @Override
     public void onItemClicked(int position, List<RoomModel> list) {
 
-        Toast.makeText(getActivity(), "Loading Deals...", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), "Loading Deals...", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity().getApplicationContext(), StatusDealActivity.class);
         intent.putExtra("passedCustomerID", list.get(position).getCreatorID());
+        startActivity(intent);
+    }
+
+    @Override
+    public void onProfileClicked(int position, List<RoomModel> list) {
+//        Toast.makeText(getActivity(), "Loading Deals...", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity().getApplicationContext(), UserActivity.class);
+        intent.putExtra("userName", list.get(position).getCreatorName());
         startActivity(intent);
     }
 }

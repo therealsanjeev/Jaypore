@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        tabLayout.addTab(tabLayout.newTab().setText("JOIN"));
+        tabLayout.addTab(tabLayout.newTab().setText("Follow"));
         tabLayout.addTab(tabLayout.newTab().setText("EXPLORE"));
         tabLayout.addTab(tabLayout.newTab().setText("STORE"));
 

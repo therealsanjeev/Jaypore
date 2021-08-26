@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:elevation="@dimen/_16sdp"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:layout_margin="@dimen/_8sdp"
+    android:layout_height="@dimen/_300sdp"
+    tools:ignore="UnusedAttribute">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageCollections"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:background="@drawable/al"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"/>
+            <ImageView
+                android:id="@+id/collectionsContainer"
+                android:background="@color/black"
+                android:alpha="0.3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"/>
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Almaaz"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_24sdp"
+                app:layout_constraintBottom_toTopOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp">
+
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/profileImgCollections"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/al"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/aboveTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A magnificent edit of Pochampally ikat dupattas to match"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/profileImgCollections"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+</androidx.cardview.widget.CardView>
