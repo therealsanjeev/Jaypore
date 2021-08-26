@@ -86,7 +86,7 @@ public class StatusDealActivity extends AppCompatActivity implements StoriesProg
     List<DealModel> dealArray = new ArrayList<>();
     private int flag;
     private LottieAnimationView heart;
-    String imageBaseUrl = "https://lootllo.com/pub/media/catalog/product";
+    String imageBaseUrl = "";//"https://lootllo.com/pub/media/catalog/product";
     private customer customer;
     private static List<String> deals;
     private DealModel currentDeal;
