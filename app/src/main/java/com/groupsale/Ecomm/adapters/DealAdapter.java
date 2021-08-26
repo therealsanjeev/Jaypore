@@ -57,12 +57,22 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
         String imageBaseUrl = "https://lootllo.com/pub/media/catalog/product";
         String arr[]={
           "https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/8/0/800028772-1_2.jpg",
-          "https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/8/0/800028771-3_2.jpg",
-                "https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/8/0/800028769-3_2.jpg",
-                "https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/8/0/800028766-1_2.jpg"
+          "https://static.jaypore.com/tr:w-307,h-463/media/catalog/product/8/4/840007548-1_4.jpg",
+                "https://static.jaypore.com/tr:w-500,h-662,e-sharpen/media/catalog/product/8/0/800037495-5_1.jpg",
+                "https://static.jaypore.com/tr:w-307,h-463/media/catalog/product/8/4/840007557-1_4.jpg"
         };
         int rnd = new Random().nextInt(arr.length);
-        Picasso.get().load(arr[rnd]).into(holder.imageView);
+        switch (list.get(position).getCreatorName()){
+            case "Rohan":
+                Picasso.get().load(arr[1]).into(holder.imageView); break;
+            case "Salman":
+                Picasso.get().load(arr[3]).into(holder.imageView); break;
+            case "Vaishali":
+                Picasso.get().load(arr[0]).into(holder.imageView); break;
+            case "Soniya":
+                Picasso.get().load(arr[2]).into(holder.imageView); break;
+
+        }
 
         Log.d("TAG", "onBindViewHolder: "+list.get(position).getImageUrl().get(0).toString());
 

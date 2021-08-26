@@ -6,7 +6,7 @@
     android:elevation="@dimen/_16sdp"
     app:cardCornerRadius="@dimen/_8sdp"
     android:layout_margin="@dimen/_8sdp"
-    android:layout_height="@dimen/_330sdp"
+    android:layout_height="@dimen/_450sdp"
     tools:ignore="UnusedAttribute">
 
 
@@ -20,13 +20,13 @@
                 android:adjustViewBounds="true"
                 android:background="@drawable/al"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_250sdp"/>
+                android:layout_height="@dimen/_370sdp"/>
             <ImageView
                 android:id="@+id/collectionsContainer"
                 android:background="@color/black"
                 android:alpha="0.3"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_250sdp"/>
+                android:layout_height="@dimen/_370sdp"/>
 
             <TextView
                 android:id="@+id/nameTv"
