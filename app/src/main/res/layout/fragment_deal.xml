@@ -3,8 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Deal">
+    tools:context=".fragment.StoreFragment">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+</androidx.core.widget.NestedScrollView>
     <WebView
         android:id="@+id/web_home"
         android:layout_width="match_parent"

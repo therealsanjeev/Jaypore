@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.groupsale.Ecomm.fragment.ExploreFragment;
 import com.groupsale.Ecomm.fragment.JoinFragment;
-import com.groupsale.Ecomm.fragment.RewardsFragment;
+import com.groupsale.Ecomm.fragment.StoreFragment;
 
 public class FragmentAdapter extends FragmentStatePagerAdapter {
 
@@ -29,7 +29,7 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
                 return new ExploreFragment();
 
             case 2:
-                return new Deal();
+                return new StoreFragment();
             default:
                 return null;
         }
