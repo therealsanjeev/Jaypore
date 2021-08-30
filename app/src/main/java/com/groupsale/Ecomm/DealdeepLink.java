@@ -62,7 +62,6 @@ public class DealdeepLink extends AppCompatActivity {
     MediaMetadataRetriever mmr = new MediaMetadataRetriever();
 
     String imageBaseUrl = "https://lootllo.com/pub/media/catalog/product";
-
     private customer customer;
 
     @Override
